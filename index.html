@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="noindex" />
+
+  <title>Kiosken</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- main section -->
+  <div class="main-content">
+
+    <!-- nav -->
+    <nav class="nav">
+      <div class="back">
+        <a href="#">
+          <div class="backBtn"></div>
+          <p>tillbehör</p>
+        </a>
+      </div>
+      <h1>Kassa</h1>
+    </nav>
+
+    <!-- cart -->
+    <div class="content">
+      <div class="content-wrapper">
+
+        <!-- kund -->
+        <aside class="customer-sidebar">
+          <!-- kunduppgifter -->
+          <div class="customer-info">
+            <h2 class="customer-header">Kunduppgifter</h2>
+            <p class="customer-para">Hämta dina adressuppgifter genom att fylla i ditt personnummer.</p>
+
+            <div class="person-number">
+              <p>personnummer:</p>
+              <input id="input-person-number" type="text" maxlength="6" name="" value="" class="person-number1" placeholder="123456">
+              —
+              <input id="input-last-four" type="text" maxlength="4" name="" value="" class="person-number2" placeholder="7890">
+            </div>
+
+            <div class="person-info">
+              <h3>Bo Göran</h3>
+              <p>Rävgatan 1b</p>
+              <p>123 45 Boliden</p>
+            </div>
+          </div>
+          <!-- contactuppgifter -->
+          <div class="contact-info">
+            <div class="contact-head">
+              <h2 class="contact-rubrik">Kontaktuppgifter</h2>
+              <p class="contact-para">Fyll i ditt mobil nummer för att få SMS när din order är redo.</p>
+            </div>
+            <div class="mobilenumber">
+              <p>Mobil Nummer:</p>
+              <input id="input-mobile" type="text" maxlength="10" placeholder="0701245678">
+              <img src="./assets/img/pencil.svg" alt="">
+            </div>
+          </div>
+        </aside>
+
+        <!-- Cart -->
+        <main class="cart-main">
+          <!-- cart -->
+          <div id="cart" class="cart">
+            <div class="item">
+              <img src="assets/img/borr.jpg" alt="">
+              <div class="item-info">
+                <h4>Bosch</h4>
+                <p>PST 700 E</p>
+              </div>
+              <div class="amount">
+                <button name="item-add" value="+">+</button>
+                <p>1st</p>
+                <button name="item-remove" value="-">-</button>
+              </div>
+              <div class="price">599kr</div>
+            </div>
+            <div class="item">
+              <img src="assets/img/blades.jpg" alt="">
+              <div class="item-info">
+                <h4>Bosch</h4>
+                <p>10-delars sticksågblad träd/ metall</p>
+              </div>
+              <div class="amount">
+                <button name="item-add" value="+">+</button>
+                <p>1st</p>
+                <button name="item-remove" value="-">-</button>
+              </div>
+              <div class="price">139kr</div>
+            </div>
+          </div>
+          <!-- checkout -->
+          <div id="checkout" class="checkout-cost">
+            <div id="delivery" class="delivery">
+              <div class="item">
+                <img src="assets/img/truck.svg" alt="">
+                <div class="item-checkbox">
+                  <input type="radio" name="item-checkbox" value="79" checked>
+                  <div class="item-checkbox-mark"></div>
+                </div>
+                <div class="item-type-info"><p>Hemleverans</p></div>
+                <div class="price">79kr</div>
+              </div>
+              <div class="item">
+                <img src="assets/img/store.svg" alt="">
+                <div class="item-checkbox">
+                  <input type="radio" name="item-checkbox" value="0">
+                  <div class="item-checkbox-mark"></div>
+                </div>
+                <div class="item-type-info"><p>Hämta i butik</p></div>
+                <div class="price"></div>
+              </div>
+            </div>
+            <div class="total">
+              <div class="total-text">
+                <p class="total-text-final">Att betala:</p>
+                <p class="total-text-moms">Varav moms:</p>
+              </div>
+              <div class="total-price">
+                <p id="total-text-final" class="total-text-final">817kr</p>
+                <p id="total-text-moms" class="total-text-moms">204kr</p>
+              </div>
+            </div>
+          </div>
+        </main>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+      <img src="./assets/img/arrow-back.svg" alt="">
+      <p>Fortsätt handla</p>
+    </div>
+
+  </div>
+
+  <!-- sidebar -->
+  <aside id="sidebar-register" class="sidebar">
+    <!-- opena and close siebar -->
+    <div id="sidebar-toggle" class="sidebar-btn"> <span></span> </div>
+    <!-- kassan -->
+    <div class="register">
+      <h3>Kassan</h3>
+      <p>Använd knappsatsen nedan för att mata in ditt personnummer respektive mobilenumber i formuläret till vänster. Välj sedan ditt önskade leveranssätt och klicka på "Beställ".</p>
+      <table id="numpad">
+        <tr>
+          <td><button type="button" name="button" value="1">1</button></td>
+          <td><button type="button" name="button" value="2">2</button></td>
+          <td><button type="button" name="button" value="3">3</button></td>
+        </tr>
+        <tr>
+          <td><button type="button" name="button" value="4">4</button></td>
+          <td><button type="button" name="button" value="5">5</button></td>
+          <td><button type="button" name="button" value="6">6</button></td>
+        </tr>
+        <tr>
+          <td><button type="button" name="button" value="7">7</button></td>
+          <td><button type="button" name="button" value="8">8</button></td>
+          <td><button type="button" name="button" value="9">9</button></td>
+        </tr>
+        <tr>
+          <td><button type="button" name="button" value="delete">
+            <img src="./assets/img/backspace.svg" alt="">
+          </button></td>
+          <td><button type="button" name="button" value="0">0</button></td>
+          <td><button type="button" name="button" value="ok">
+            <img src="./assets/img/checked.svg" alt="">
+          </button></td>
+        </tr>
+      </table>
+    </div>
+    <!-- beställ -->
+    <div id="order" class="order">
+      <p>Beställ</p>
+      <div class="order_btn"></div>
+    </div>
+  </aside>
+
+
+
+  <script src="assets/js/app.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+@import "normalize";
+@import "variables";
+
+@import "paragraph";
+
+@import "content";
+@import "sidebar";
+@import "nav";
+
+@import "item";
+@import "footer";
+@import "customer";
+
+
+html, body{
+  margin: 0;
+  padding: 0;
+  background: $color-brand;
+}
+*, *:after, *:before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+// Media queries (just a )
+
+@media screen and (max-width: 1340px) {
+  .main-content{
+    overflow: auto;
+  }
+  .content-wrapper{
+    display: block;
+    height: auto;
+    top: 0;
+
+    .customer-sidebar{
+      width: 100%;
+      height: auto;
+      align-items: flex-start;
+    }
+    .cart-main{
+      width: 100%;
+      margin-top: 10px;
+      left: 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 920px) {
+  .main-content{
+    width: 100%;
+    height: auto;
+  }
+  .content{
+    height: auto;
+  }
+  .cart-main{
+    display: block;
+  }
+  .content-wrapper{
+    width: calc(100% - 4rem);
+    margin: 10px 0;
+    left: 2rem;
+  }
+  .sidebar{
+    display: block;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    right: -330px;
+    overflow: scroll;
+  }
+  .sidebar-btn{
+    display: block;
+  }
+  .register{
+    display: block;
+    padding: 100px 0 50px 0;
+    min-height: calc(100% - 6rem);
+    overflow: auto;
+  }
+
+  .cart-main{
+    padding: 5px;
+  }
+
+  .item{
+    display: block;
+    overflow: auto;
+
+    img{
+      float: left;
+      margin: 0;
+    }
+    .item-checkbox{
+      float: left;
+      margin: 0 5px;
+    }
+    .item-info{
+      float: left;
+      margin: 0;
+      min-height: 50px;
+      width: calc(100% - 50px);
+    }
+    .amount{
+      float: left;
+      width: 50%;
+      margin: 0;
+      text-align: center;
+
+      button, p{
+        display: inline-block;
+        float: none;
+      }
+    }
+    .price{
+      float: left;
+      width: 50%;
+      margin: 0;
+    }
+  }
+  .delivery .item .price{
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .nav h1{
+    display: none;
+  }
+}

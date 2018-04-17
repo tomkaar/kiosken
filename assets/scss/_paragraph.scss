@@ -1,0 +1,13 @@
+@mixin paragraph{
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: $color-grey;
+}
+
+
+@mixin title{
+  color: $color-grey;
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-size: 26px;
+}
