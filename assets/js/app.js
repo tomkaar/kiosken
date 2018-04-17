@@ -130,16 +130,18 @@ document.getElementById("numpad")
     if(e.target.value == "ok"){
       if(personNumber.value.length !== 6){
         console.log("personNumber");
+        alert("Du måste fylla i ditt person nummer");
       }
       if(lastFour.value.length !== 4){
         console.log("lastFour");
+        alert("Du måste fylla i ditt person nummer");
       }
       if(mobileNumber.value.length !== 10){
         console.log("mobileNumber");
+        alert("Du måste fylla i ditt mobil nummer");
       }
       if(personNumber.value.length == 6 && lastFour.value.length == 4 && mobileNumber.value.length == 10){
-        // if everything is OK
-        console.log("EVERYTING IS OK!");
+        alert("Allt är ifyllt!");
       }
     }
   }
